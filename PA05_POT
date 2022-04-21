@@ -1,0 +1,28 @@
+#include <iostream>
+#include <math.h>
+ 
+using namespace std;
+ 
+int ile;
+int podstawa_a;
+int wykladnik_b;
+ 
+int main()
+{
+    cin >> ile;
+ 
+    for (int i=0; i<ile; i++)
+    {
+        cin >> podstawa_a >> wykladnik_b;
+ 
+        podstawa_a = podstawa_a%10;
+        wykladnik_b = (wykladnik_b%4)+4;
+ 
+        int last_digit = pow(podstawa_a, wykladnik_b);
+        last_digit = last_digit%10;
+ 
+        cout << last_digit << endl;
+    }
+ 
+    return 0;
+}
